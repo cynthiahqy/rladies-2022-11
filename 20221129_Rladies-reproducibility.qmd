@@ -11,93 +11,223 @@ incremental: false
 embed-resources: true
 ---
 
-```{r setup}
-library(gt)
-library(dplyr)
-```
+# Reproducibility! Now!
 
-## About Me
+## Why reproducibility?
 
-<!--# can I just iframe my website? -->
-
-## Itinerary
-
-### Surveying the Tools Landscape
-
-### My Journey with Reproducibility
-
-### What about you?
-
-### Tips for Choosing your Own Adventure
-
-
-## Reproducibility! Now!
-
-![An illustration of reasons why we should care about working reproducibly. [Fig 7, Guide for Reproducible Research, The Turing Way](https://the-turing-way.netlify.app/reproducible-research/overview/overview-benefit.html)](https://the-turing-way.netlify.app/_images/reasons-reproducibility.png)
+![An illustration of reasons why we should care about working reproducibly from [The Turing Way, Guide for Reproducible Research](https://the-turing-way.netlify.app/reproducible-research/overview/overview-benefit.html)](https://the-turing-way.netlify.app/_images/reasons-reproducibility.png)
 
 ## An ever growing pile of tools...
 
-```{r gt-pkgs}
-tribble(~pkg, ~type, ~hex_url, ~pkg_website,
-        "renv", "computational environments", "https://raw.githubusercontent.com/rstudio/renv/757754bed853e421dfe7ea38b52dc59141e87ce2/man/figures/logo.svg", "https://rstudio.github.io/renv/",
-        "litr", "literature programming", "https://github.com/jacobbien/litr-project/blob/0838ca81ef705ed8f706f40f7a8bbfff8a21f353/litr/man/figures/logo.png?raw=true", "https://jacobbien.github.io/litr-project/"
-        #"quarto", "authoring frameworks", "link", "https://quarto.org"
-) |>
-  #mutate(hex_button = glue::glue('<a href="{pkg_docs}"><img src="{hex_url}"></a>')) |>
-  mutate(hex_button = sprintf('<a href="%s"><img src="%s" style="height:35px"></a>', pkg_website, hex_url)) |>
-  mutate(hex_button = purrr::map(hex_button, gt::html)) |>
-  select(pkg, hex_button) |>
-  gt()
-```
+-   Quarto, Rmarkdown
+-   Git/GitHub
+-   R functions, scripts, packages
+-   `{targets}`, `{renv}`, `{lintr}`, `{styler}`...
 
-# Mapping my Journey
+> We're awash in ***information***! What we need is ***curation.***
 
-## some context...
+## a bit about my journey...
 
--   majored in economics at Unimelb -- no coding! very little econometrics... mostly theory..
--   taught myself to code in R & python while working as a research assistant at UniMelb
--   designed, collected, wrangled and explored all sorts of wild caught data -- surveys, archives, time-series, spatial, panel, text...
--   dabbling with modelling..
+-   majored in **economics** at Unimelb -- no coding! very little econometrics... mostly theory..
+-   taught myself to code in **R & python** while working as a research assistant at UniMelb
+-   designed, collected, wrangled and explored all sorts of **wild caught data** -- surveys, archives, time-series, spatial, panel, text...
+-   recently began dipping my toes into **machine learning and deep learning**
+-   currently working on **interdisciplinary data science methods** with applications to panel data harmonisation and satellite deep learning
 
-## {background-image="images/map-blank.png" background-size="contain"}
+# Mapping the Landscape
 
-## Wandering the forest {background-image="images/map-beginner.png" background-size="contain"}
+## {background-image="images/map-blank.png" background-size="85%"}
 
-## Up into the Clouds {background-image="images/map-intermediate.png" background-size="contain"}
+## A Gentle Stroll {background-image="images/map-beginner.png" background-size="85%"}
 
-## Out to Sea {background-image="images/map-advanced.png" background-size="contain"}
-
-------------------------------------------------------------------------
-
--   command line interface
--   literature programming, authoring frameworks
--   version control
--   collaboration
--   "you should check this out"
-
-# What about you?
-
-------------------------------------------------------------------------
+## Tidy data & code
 
 ::: columns
-::: {.column width="40%"}
-Menti-Meter
+::: {.column width="70%"}
+> "Like families, tidy datasets are all alike but every messy dataset is messy in its own way"
+>
+> \- [{tidyr}: Tidy data](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)
+
+> "Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread."
+>
+> -   [The tidyverse style guide](https://style.tidyverse.org/index.html)
+
+Jump in here:
+
+-   [Learn the tidyverse](https://www.tidyverse.org/learn/)
 :::
 
-::: {.column width="60%"}
-Enablers - Life changing tools? -
-
-Frictions - Things you "should" do, but just can't -
+::: {.column width="30%"}
+![Illustration from the Openscapes blog Tidy Data for reproducibility, efficiency, and collaboration by Julia Lowndes and Allison Horst](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/40488240-4609-4dc3-8920-693e078b55ce_rw_1920.jpg?h=2e96a7e21e19c43867546498da026649){fig-alt="Digital illustration of two cute fuzzy monsters sitting on a park bench with a smiling data table between them, all eating ice cream together. In text above the illustration are the hand drawn words \"make friends with tidy data.\""}
 :::
 :::
 
-------------------------------------------------------------------------
+## Literate Programming
 
-# Choose your Own Adventure
+> Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want the computer to do. -- (Knuth 1984)
 
-## Lessons from my misadventures
+From [Modern Data Book by Martin Shepperd](https://bookdown.org/martin_shepperd/ModernDataBook/C3_Literate.html):
 
--   Invest in the command line
--   
+> 1.  move away from writing programs to 'please' the computer
+> 2.  instead, focus on **communication and understanding**
+> 3.  create a **single document** to integrate data analysis (executable code) with textual documentation, linking data, code, and explanation
+
+## Literate Programming
+
+::: columns
+::: {.column width="70%"}
+Start with:
+
+-   [Quarto FAQ for R Markdown Users](https://quarto.org/docs/faq/rmarkdown.html)
+-   [Hello, Quarto Tutorial](https://quarto.org/docs/get-started/hello/rstudio.html)
+
+and then maybe:
+
+-   [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
+-   [Awesome Quarto](https://github.com/mcanouil/awesome-quarto)
+:::
+
+::: {.column width="30%"}
+:::
+:::
+
+## R Packages
+
+> Packages are the fundamental units of reproducible R code. They include reusable R functions, the documentation that describes how to use them, and sample data. - [R Packages (2e)](https://r-pkgs.org)
+
+From simple to more involved:
+
+-   [Writing a Personal R Package](https://www.jumpingrivers.com/blog/personal-r-package/)
+-   [R package primer by Karl Broman](https://kbroman.org/pkg_primer/)
+-   [Our colour of magic: The open sourcery of fantastic R packages by Miles McBain](https://www.rstudio.com/resources/rstudioconf-2019/our-colour-of-magic-the-open-sourcery-of-fantastic-r-packages/)
+-   [`{litr}`: Writing R Packages via literate programming](https://jacobbien.github.io/litr-project/)
+
+## Up, Up and Away {background-image="images/map-intermediate.png" background-size="85%"}
+
+## Command Line
+
+> "The command line is a tool for talking to your operating system (e.g., macOS, Windows, etc.) using text instead of by moving around a mouse and clicking on things"
+>
+> \- [The Command Line from Practical Data Science by Nick Eubank](https://www.practicaldatascience.org/html/command_line_part1.html)
+
+## Command Line
+
+Dip your toes in with:
+
+-   [The Command Line from Practical Data Science by Nick Eubank](https://www.practicaldatascience.org/html/command_line_part1.html)
+-   [The Unix Shell by The Carpentries](https://swcarpentry.github.io/shell-novice/)
+
+Then dive deeper...
+
+-   [A Comprehensive Introduction to Command Line for R Users](https://blog.rsquaredacademy.com/command-line-basics-for-r-users/)
+-   lots of Google: `bash`, `zsh`, `Terminal`, `shell`
+
+## Version Control
+
+> A version control system, or VCS, tracks the history of changes as people and teams collaborate on projects together. As developers make changes to the project, any earlier version of the project can be recovered at any time.
+>
+> \- [GitHub Docs: About Git](https://docs.github.com/en/get-started/using-git/about-git)
+
+![The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807.](https://the-turing-way.netlify.app/_images/project-history.svg)
+
+## Version Control
+
+Some good starting points:
+
+-   [How to Use Git/GitHub with R by David Keyes](https://rfortherestofus.com/2021/02/how-to-use-git-github-with-r/)
+-   [Happy Git and GitHub for the userR by Jennifer Bryan](https://happygitwithr.com/index.html)
+-   Colleagues and collaborators, anyone pushing you to use Git/GitHub
+-   Youtube videos: `git`, `github`
+
+Experimenting with more advanced features:
+
+-   [Git Official Documentation](https://git-scm.com/doc)
+-   [Bitbucket Tutorials](https://www.atlassian.com/git/tutorials)
+-   Reset any mistakes using Dropbox history or GitHub repo
+
+## Collaboration
+
+From [The Turing Way, Guide for Collaboration](https://the-turing-way.netlify.app/collaboration/collaboration.html):
+
+![The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807.](https://the-turing-way.netlify.app/_images/collaboration.svg)
+
+## Collaboration
+
+Some (often) good enough tools:
+
+-   Google Docs, Slides, and Sheets
+-   Dropbox
+-   GitHub
+
+Some R specific resources:
+
+-   [Efficient collaboration from Efficient R Programming by Colin Gillespie and Robin Lovelace](https://csgillespie.github.io/efficientR/collaboration.html)
+-   [Don't R alone! A guide to tools for collaboration with R by Noam Ross](https://d-rug.github.io/blog/2013/collaborating-with-r)
+
+## Out to Sea {background-image="images/map-advanced.png" background-size="85%"}
+
+## Workflows and Pipelines
+
+> A pipeline is a computational workflow that does statistics, analytics, or data science... A pipeline contains tasks to prepare datasets, run models, and summarize results for a business deliverable or research paper.
+>
+> \- [`{targets}` Overview](https://docs.ropensci.org/targets/index.html)
+
+On my to-explore list:
+
+-   [`{targets}` Walkthrough](https://books.ropensci.org/targets/walkthrough.html)
+-   Templating with [`{epoxy}`](https://pkg.garrickadenbuie.com/epoxy/)
+-   [How to use Quarto for Parameterised Reporting by Mike Mahoney](https://www.mm218.dev/posts/2022-08-04-how-to-use-quarto-for-parameterized-reporting/)
+
+## Environments
+
+![Ways of capturing computational environments from [The Turing Way, Guide for Reproducible Research](https://the-turing-way.netlify.app/reproducible-research/renv/renv-options.html)](https://the-turing-way.netlify.app/_images/computational-environments.jpg)
+
+Possible starting points:
+
+-   [Virtual Environments, Quarto Docs](https://quarto.org/docs/projects/virtual-environments.html)
+-   [Get started with {renv}](https://rstudio.github.io/renv/articles/renv.html)
+
+## Testing and Validation
+
+![The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807.](https://the-turing-way.netlify.app/_images/error-management.svg) Motivation and guidance on testing:
+
+-   [Testing, R Packages](https://r-pkgs.org/testing-basics.html)
+-   [Code Testing, The Turing Way](https://the-turing-way.netlify.app/reproducible-research/testing.html)
+
+# Lessons from my misadventures
+
+## {background-image="images/map-colored.png" background-size="85%"}
+
+## Priorities, priorities, priorities...
+
+-   **Keep a list of frictions:**
+    -   copy & pasting? comparing files?
+    -   "it would be nice if...."
+-   **Consider who you are learning for:**
+    -   current you? future you? unknown others?
+-   What outcomes have the **most value for you**?
+    -   automation, version control & experiment tracking, research communication?
+
+## Keep it up!
+
+-   Get help!
+-   Share your successes
+-   Incremental improvements are better than complete overhauls
+-   Carve out time to experiment with features
+
+Special mentions to:
+
+-   [rOpenSci Social Coworking and Office Hours](https://ropensci.org/events/)
+-   [The Turing Way handbook to reproducible, ethical and collaborative data science](https://the-turing-way.netlify.app/welcome.html)
 
 ## Thanks for listening!
+
+Find me @cynthiahqy on:
+
+-   [Twitter](https://twitter.com/cynthiahqy)
+-   [GitHub](https://github.com/cynthiahqy)
+-   [Website](https://www.cynthiahqy.com)
+
+## References
+
+Coming Soon...
