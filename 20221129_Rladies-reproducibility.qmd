@@ -1,0 +1,103 @@
+---
+title: "Misadventures with Reproducibility in R"
+subtitle: "R Ladies Melbourne, 29 Nov 2022"
+author: "[Cynthia Huang](https://twitter.com/cynthiahqy)"
+format:
+  rladies-revealjs:
+    footer: "[R-Ladies](https://rladies.org/) theme for [Quarto Presentations](https://quarto.org/docs/presentations/revealjs/index.html). Code available on [GitHub](https://github.com/beatrizmilz/quarto-rladies-theme)."
+    slide-number: true
+    preview-links: auto
+incremental: false
+embed-resources: true
+---
+
+```{r setup}
+library(gt)
+library(dplyr)
+```
+
+## About Me
+
+<!--# can I just iframe my website? -->
+
+## Itinerary
+
+### Surveying the Tools Landscape
+
+### My Journey with Reproducibility
+
+### What about you?
+
+### Tips for Choosing your Own Adventure
+
+
+## Reproducibility! Now!
+
+![An illustration of reasons why we should care about working reproducibly. [Fig 7, Guide for Reproducible Research, The Turing Way](https://the-turing-way.netlify.app/reproducible-research/overview/overview-benefit.html)](https://the-turing-way.netlify.app/_images/reasons-reproducibility.png)
+
+## An ever growing pile of tools...
+
+```{r gt-pkgs}
+tribble(~pkg, ~type, ~hex_url, ~pkg_website,
+        "renv", "computational environments", "https://raw.githubusercontent.com/rstudio/renv/757754bed853e421dfe7ea38b52dc59141e87ce2/man/figures/logo.svg", "https://rstudio.github.io/renv/",
+        "litr", "literature programming", "https://github.com/jacobbien/litr-project/blob/0838ca81ef705ed8f706f40f7a8bbfff8a21f353/litr/man/figures/logo.png?raw=true", "https://jacobbien.github.io/litr-project/"
+        #"quarto", "authoring frameworks", "link", "https://quarto.org"
+) |>
+  #mutate(hex_button = glue::glue('<a href="{pkg_docs}"><img src="{hex_url}"></a>')) |>
+  mutate(hex_button = sprintf('<a href="%s"><img src="%s" style="height:35px"></a>', pkg_website, hex_url)) |>
+  mutate(hex_button = purrr::map(hex_button, gt::html)) |>
+  select(pkg, hex_button) |>
+  gt()
+```
+
+# Mapping my Journey
+
+## some context...
+
+-   majored in economics at Unimelb -- no coding! very little econometrics... mostly theory..
+-   taught myself to code in R & python while working as a research assistant at UniMelb
+-   designed, collected, wrangled and explored all sorts of wild caught data -- surveys, archives, time-series, spatial, panel, text...
+-   dabbling with modelling..
+
+## {background-image="images/map-blank.png" background-size="contain"}
+
+## Wandering the forest {background-image="images/map-beginner.png" background-size="contain"}
+
+## Up into the Clouds {background-image="images/map-intermediate.png" background-size="contain"}
+
+## Out to Sea {background-image="images/map-advanced.png" background-size="contain"}
+
+------------------------------------------------------------------------
+
+-   command line interface
+-   literature programming, authoring frameworks
+-   version control
+-   collaboration
+-   "you should check this out"
+
+# What about you?
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="40%"}
+Menti-Meter
+:::
+
+::: {.column width="60%"}
+Enablers - Life changing tools? -
+
+Frictions - Things you "should" do, but just can't -
+:::
+:::
+
+------------------------------------------------------------------------
+
+# Choose your Own Adventure
+
+## Lessons from my misadventures
+
+-   Invest in the command line
+-   
+
+## Thanks for listening!
