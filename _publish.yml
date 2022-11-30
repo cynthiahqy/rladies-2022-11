@@ -1,0 +1,4 @@
+- source: 20221129_Rladies-reproducibility.qmd
+  quarto-pub:
+    - id: d1432138-f3d4-43ff-9325-8c71c0558edc
+      url: 'https://quartopub.com/sites/cynthiahqy/misadventures-with-reproducibility-in-r'

@@ -36,7 +36,7 @@ embed-resources: true
 
 # Mapping the Landscape
 
-## {background-image="images/map-blank.png" background-size="85%"}
+##  {background-image="images/map-blank.png" background-size="85%"}
 
 ## A Gentle Stroll {background-image="images/map-beginner.png" background-size="85%"}
 
@@ -44,13 +44,9 @@ embed-resources: true
 
 ::: columns
 ::: {.column width="70%"}
-> "Like families, tidy datasets are all alike but every messy dataset is messy in its own way"
->
-> \- [{tidyr}: Tidy data](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)
+> "Like families, tidy datasets are all alike but every messy dataset is messy in its own way" - [{tidyr}: Tidy data](https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html)
 
-> "Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread."
->
-> -   [The tidyverse style guide](https://style.tidyverse.org/index.html)
+> "Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread." - [The tidyverse style guide](https://style.tidyverse.org/index.html)
 
 Jump in here:
 
@@ -189,14 +185,16 @@ Possible starting points:
 
 ## Testing and Validation
 
-![The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807.](https://the-turing-way.netlify.app/_images/error-management.svg) Motivation and guidance on testing:
+![The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807.](https://the-turing-way.netlify.app/_images/error-management.svg)
+
+Motivation and guidance on testing:
 
 -   [Testing, R Packages](https://r-pkgs.org/testing-basics.html)
 -   [Code Testing, The Turing Way](https://the-turing-way.netlify.app/reproducible-research/testing.html)
 
 # Lessons from my misadventures
 
-## {background-image="images/map-colored.png" background-size="85%"}
+##  {background-image="images/map-colored.png" background-size="85%"}
 
 ## Priorities, priorities, priorities...
 
