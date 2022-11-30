@@ -28,8 +28,8 @@ embed-resources: true
 
 ## a bit about my journey...
 
--   majored in **economics** at Unimelb -- no coding! very little econometrics... mostly theory..
--   taught myself to code in **R & python** while working as a research assistant at UniMelb
+-   majored in **economics** at Unimelb -- no coding! mostly theory.. very little econometrics...
+-   taught myself bits of **R, python and shell scripting** while working as a research assistant at UniMelb
 -   designed, collected, wrangled and explored all sorts of **wild caught data** -- surveys, archives, time-series, spatial, panel, text...
 -   recently began dipping my toes into **machine learning and deep learning**
 -   currently working on **interdisciplinary data science methods** with applications to panel data harmonisation and satellite deep learning
@@ -62,7 +62,7 @@ Jump in here:
 
 > Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want the computer to do. -- (Knuth 1984)
 
-From [Modern Data Book by Martin Shepperd](https://bookdown.org/martin_shepperd/ModernDataBook/C3_Literate.html):
+From the [Modern Data Book by Martin Shepperd](https://bookdown.org/martin_shepperd/ModernDataBook/C3_Literate.html):
 
 > 1.  move away from writing programs to 'please' the computer
 > 2.  instead, focus on **communication and understanding**
@@ -100,31 +100,19 @@ From simple to more involved:
 
 ## Up, Up and Away {background-image="images/map-intermediate.png" background-size="85%"}
 
-## Command Line
-
-> "The command line is a tool for talking to your operating system (e.g., macOS, Windows, etc.) using text instead of by moving around a mouse and clicking on things"
->
-> \- [The Command Line from Practical Data Science by Nick Eubank](https://www.practicaldatascience.org/html/command_line_part1.html)
-
-## Command Line
-
-Dip your toes in with:
-
--   [The Command Line from Practical Data Science by Nick Eubank](https://www.practicaldatascience.org/html/command_line_part1.html)
--   [The Unix Shell by The Carpentries](https://swcarpentry.github.io/shell-novice/)
-
-Then dive deeper...
-
--   [A Comprehensive Introduction to Command Line for R Users](https://blog.rsquaredacademy.com/command-line-basics-for-r-users/)
--   lots of Google: `bash`, `zsh`, `Terminal`, `shell`
-
 ## Version Control
 
+::: columns
+::: {.column width="70%"}
 > A version control system, or VCS, tracks the history of changes as people and teams collaborate on projects together. As developers make changes to the project, any earlier version of the project can be recovered at any time.
 >
 > \- [GitHub Docs: About Git](https://docs.github.com/en/get-started/using-git/about-git)
+:::
 
+::: {.column width="30%"}
 ![The Turing Way project illustration by Scriberia. Used under a CC-BY 4.0 licence. DOI: 10.5281/zenodo.3332807.](https://the-turing-way.netlify.app/_images/project-history.svg)
+:::
+:::
 
 ## Version Control
 
@@ -140,6 +128,32 @@ Experimenting with more advanced features:
 -   [Git Official Documentation](https://git-scm.com/doc)
 -   [Bitbucket Tutorials](https://www.atlassian.com/git/tutorials)
 -   Reset any mistakes using Dropbox history or GitHub repo
+
+## Command Line
+
+::: columns
+::: {.column width="70%"}
+> "The command line is a tool for talking to your operating system (e.g., macOS, Windows, etc.) using text instead of by moving around a mouse and clicking on things"
+>
+> \- [The Command Line from Practical Data Science by Nick Eubank](https://www.practicaldatascience.org/html/command_line_part1.html)
+:::
+
+::: {.column width="30%"}
+![](images/icon-macOS-terminal.png)
+:::
+:::
+
+## Command Line
+
+Dip your toes in with:
+
+-   [The Command Line from Practical Data Science by Nick Eubank](https://www.practicaldatascience.org/html/command_line_part1.html)
+-   [The Unix Shell by The Carpentries](https://swcarpentry.github.io/shell-novice/)
+
+Then dive deeper...
+
+-   [A Comprehensive Introduction to Command Line for R Users](https://blog.rsquaredacademy.com/command-line-basics-for-r-users/)
+-   lots of Google: `bash`, `zsh`, `Terminal`, `shell`
 
 ## Collaboration
 
@@ -162,6 +176,15 @@ Some R specific resources:
 
 ## Out to Sea {background-image="images/map-advanced.png" background-size="85%"}
 
+## Environments
+
+![Ways of capturing computational environments from [The Turing Way, Guide for Reproducible Research](https://the-turing-way.netlify.app/reproducible-research/renv/renv-options.html)](https://the-turing-way.netlify.app/_images/computational-environments.jpg)
+
+Possible starting points:
+
+-   [Virtual Environments, Quarto Docs](https://quarto.org/docs/projects/virtual-environments.html)
+-   [Get started with {renv}](https://rstudio.github.io/renv/articles/renv.html)
+
 ## Workflows and Pipelines
 
 > A pipeline is a computational workflow that does statistics, analytics, or data science... A pipeline contains tasks to prepare datasets, run models, and summarize results for a business deliverable or research paper.
@@ -173,15 +196,6 @@ On my to-explore list:
 -   [`{targets}` Walkthrough](https://books.ropensci.org/targets/walkthrough.html)
 -   Templating with [`{epoxy}`](https://pkg.garrickadenbuie.com/epoxy/)
 -   [How to use Quarto for Parameterised Reporting by Mike Mahoney](https://www.mm218.dev/posts/2022-08-04-how-to-use-quarto-for-parameterized-reporting/)
-
-## Environments
-
-![Ways of capturing computational environments from [The Turing Way, Guide for Reproducible Research](https://the-turing-way.netlify.app/reproducible-research/renv/renv-options.html)](https://the-turing-way.netlify.app/_images/computational-environments.jpg)
-
-Possible starting points:
-
--   [Virtual Environments, Quarto Docs](https://quarto.org/docs/projects/virtual-environments.html)
--   [Get started with {renv}](https://rstudio.github.io/renv/articles/renv.html)
 
 ## Testing and Validation
 
@@ -224,8 +238,9 @@ Find me @cynthiahqy on:
 
 -   [Twitter](https://twitter.com/cynthiahqy)
 -   [GitHub](https://github.com/cynthiahqy)
--   [Website](https://www.cynthiahqy.com)
 
-## References
+Some shameless plugs:
 
-Coming Soon...
+-   [The Random Sample Podcast](https://www.therandomsample.com.au)
+-   [`{conformr}`](https://github.com/cynthiahqy/conformr-project), an opinionated toolkit for data harmonisation
+-   [Digital Garden](https://www.cynthiahqy.com), built with Quarto
